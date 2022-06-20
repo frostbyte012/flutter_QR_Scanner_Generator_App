@@ -16,8 +16,10 @@ class _HomePageState extends State<HomePage> {
   
   
   void qRScannerNavigation(){
-    
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>QRScanner()));
+
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) => const QRViewExample(),
+    ));
     
   }
 
@@ -35,10 +37,10 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Padding(padding: EdgeInsets.fromLTRB(45,0,5,0),child: QrButtton(title: 'QR SCAN',func: qRScannerNavigation,sizee:300,)),
+          Padding(padding: EdgeInsets.fromLTRB(55,0,5,0),child: QrButtton(title: 'QR GEN',func: qRGeneratorNavigation,sizee: 300,)),
           SizedBox(height: 20,),
-          Padding(padding: EdgeInsets.fromLTRB(45,0,5,0),child: QrButtton(title: 'QR GEN',func: qRGeneratorNavigation,sizee: 300,)),
-        ],
+          Padding(padding: EdgeInsets.fromLTRB(55,0,5,0),child: QrButtton(title: 'QR SCAN',func: qRScannerNavigation,sizee:300,)),
+                 ],
       ),
 
     );
