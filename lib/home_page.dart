@@ -33,14 +33,16 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Center(child: Text(kAppBarName,style: kAppBarTitleTextStyle,)),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(padding: EdgeInsets.fromLTRB(55,0,5,0),child: QrButtton(title: 'QR GEN',func: qRGeneratorNavigation,sizee: 300,)),
-          SizedBox(height: 20,),
-          Padding(padding: EdgeInsets.fromLTRB(55,0,5,0),child: QrButtton(title: 'QR SCAN',func: qRScannerNavigation,sizee:300,)),
-                 ],
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(padding: EdgeInsets.fromLTRB(0,0,5,0),child: QrButtton(title: 'QR GEN',func: qRGeneratorNavigation,sizee: 300,)),
+            SizedBox(height: 20,),
+            Padding(padding: EdgeInsets.fromLTRB(0,0,5,0),child: QrButtton(title: 'QR SCAN',func: qRScannerNavigation,sizee:300,)),
+                   ],
+        ),
       ),
 
     );
