@@ -54,8 +54,8 @@ class _QRViewExampleState extends State<QRViewExample> {
                   if (result != null)
                     Text(
 
-                        // 'Barcode Type: ${describeEnum(result!.format)}   Data: ${result!.code}'
-                        '${result!.code!.split('┤')[1].trimLeft().split('├')[0].trimRight()}'
+                        '${result!.code}'
+                        // '${result!.code!.split('┤')[1].trimLeft().split('├')[0].trimRight()}'
 
                     )
                   else
@@ -156,7 +156,8 @@ class _QRViewExampleState extends State<QRViewExample> {
                           ),
 
                           onPressed: (){
-                            Clipboard.setData(ClipboardData(text: "${result!.code!.split('┤')[1].trimLeft().split('├')[0].trimRight()}"));
+                            Clipboard.setData(ClipboardData(text: "${result!.code}"));
+                            // Clipboard.setData(ClipboardData(text: "${result!.code!.split('┤')[1].trimLeft().split('├')[0].trimRight()}"));
                           },
                           child: const Icon(Icons.copy),
                         ),
