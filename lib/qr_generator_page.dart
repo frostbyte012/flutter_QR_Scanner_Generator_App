@@ -75,8 +75,8 @@ class _QRGeneratorPageState extends State<QRGeneratorPage> {
 
           Center(
             child: Container(
-                width: 300,
-                height: 300,
+                width: 500,
+                height: 390,
                 child:
             Padding(
               padding: EdgeInsets.fromLTRB(0,0, 0, 0),
@@ -96,7 +96,20 @@ class _QRGeneratorPageState extends State<QRGeneratorPage> {
                       ),
                     );
                   }
-              ):Padding(padding:EdgeInsets.fromLTRB(30,0,0,0),child: Text("Let's Generate a QR !",style: kQRGeneratorButtonTextStyle,)),
+              ):Column(
+                children: [
+                  Padding(padding:EdgeInsets.fromLTRB(30,0,0,0),child: Text("Let's Generate a QR !",style: kQRGeneratorButtonTextStyle,)
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Image.asset(
+                    'lib/images/downsign-qr-code.gif',
+                     width: 300,
+                    height: 300,
+                  ),
+                ],
+              ),
              ),
             ),
           ),
